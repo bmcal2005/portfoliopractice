@@ -1,47 +1,114 @@
-# Engineering Portfolio Website
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Engineering Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main>
+      <section class="hero" id="top">
+        <div class="hero-grid" aria-hidden="true"></div>
+        <div class="hero-content">
+          <h1>Your Name</h1>
+          <p class="hero-title">Engineering Portfolio</p>
+          <p class="hero-copy">
+            Developing and delivering project-based solutions in automotive
+            systems, robotics, electronics, and advanced materials research.
+          </p>
 
-This is a static portfolio site like the screenshots you shared. It uses only:
+          <div class="stats" aria-label="Portfolio statistics">
+            <div>
+              <strong>12+</strong>
+              <span>Projects</span>
+            </div>
+            <div>
+              <strong>5+</strong>
+              <span>Years Experience</span>
+            </div>
+          </div>
 
-- HTML
-- CSS
-- JavaScript
+          <div class="hero-actions">
+            <a class="button primary" href="#projects">
+              View Projects
+              <span aria-hidden="true">-&gt;</span>
+            </a>
+            <a class="button light" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">
+              <span aria-hidden="true">in</span>
+              LinkedIn
+            </a>
+            <a class="button light" href="mailto:you@example.com">
+              <span aria-hidden="true">@</span>
+              Email
+            </a>
+          </div>
+        </div>
+        <a class="scroll-cue" href="#projects" aria-label="Scroll to projects"></a>
+      </section>
 
-That means it can be hosted for free with GitHub Pages.
+      <section class="projects-section" id="projects">
+        <div class="section-heading">
+          <h2>Engineering Projects</h2>
+          <p>
+            A collection of mechanical engineering projects spanning automotive,
+            materials research, electronics, and sustainable technology development.
+          </p>
+        </div>
 
-## Edit Your Info
+        <div class="filters" aria-label="Project category filters">
+          <button class="filter active" type="button" data-filter="all">All Projects</button>
+          <button class="filter" type="button" data-filter="mechanical">Mechanical</button>
+          <button class="filter" type="button" data-filter="electronics">Electronics</button>
+          <button class="filter" type="button" data-filter="materials">Materials</button>
+          <button class="filter" type="button" data-filter="software">Software</button>
+          <button class="filter" type="button" data-filter="aerodynamics">Aerodynamics</button>
+          <button class="filter" type="button" data-filter="structures">Structures</button>
+        </div>
 
-Open `index.html` and change:
+        <div class="project-grid" id="projectGrid"></div>
+      </section>
 
-- `Your Name`
-- `you@example.com`
-- LinkedIn links
-- Berkeley, CA
-- The short bio
+      <section class="contact-section" id="contact">
+        <div class="contact-inner">
+          <h2>Let's Connect</h2>
+          <p class="contact-copy">
+            Interested in collaborating on engineering projects or discussing
+            opportunities? I'd love to hear from you.
+          </p>
 
-Open `script.js` and edit the `projects` array to change:
+          <div class="contact-cards">
+            <a class="contact-card" href="mailto:you@example.com">
+              <span class="contact-icon" aria-hidden="true">@</span>
+              <strong>Email</strong>
+              <span>you@example.com</span>
+              <small>Available for project discussions</small>
+            </a>
 
-- Project names
-- Years
-- Categories
-- Descriptions
-- Tags
+            <a class="contact-card" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">
+              <span class="contact-icon" aria-hidden="true">in</span>
+              <strong>LinkedIn</strong>
+              <span>linkedin.com/in/yourname</span>
+              <small>Professional network &amp; updates</small>
+            </a>
+          </div>
 
-## Add Your Real Images
+          <div class="location">Berkeley, CA</div>
+          <p class="bio">
+            Currently pursuing mechanical engineering with specializations in
+            design optimization, manufacturing processes, and systems integration.
+            Open to internships, research opportunities, and collaborative projects.
+          </p>
+        </div>
+      </section>
+    </main>
 
-Right now the cards use generated CSS artwork so the design looks complete.
-To use real images, add an `images` folder and replace the `.project-image`
-background logic with normal `<img>` tags.
-
-## Put It On GitHub Pages
-
-1. Create a new GitHub repository named `portfolio`.
-2. Upload `index.html`, `styles.css`, `script.js`, and this README.
-3. Go to repository `Settings`.
-4. Click `Pages`.
-5. Under `Build and deployment`, choose `Deploy from a branch`.
-6. Select the `main` branch and `/root`.
-7. Your site will appear at:
-
-```text
-https://yourusername.github.io/portfolio/
-```
+    <script src="script.js"></script>
+  </body>
+</html>
